@@ -31,6 +31,9 @@ import com.juul.koap.Message.Option.ETag
 import com.juul.koap.Message.Option.Echo
 import com.juul.koap.Message.Option.IfMatch
 import com.juul.koap.Message.Option.IfNoneMatch
+import com.juul.koap.Message.Option.Observe
+import com.juul.koap.Message.Option.Observe.Registration.Deregister
+import com.juul.koap.Message.Option.Observe.Registration.Register
 import com.juul.koap.Message.Option.RequestTag
 import com.juul.koap.Message.Option.UriHost
 import com.juul.koap.Message.Option.UriPort
@@ -57,6 +60,11 @@ class MessageTest {
 
         // plain name
         assertToString(IfNoneMatch, "IfNoneMatch")
+
+        // observe
+        assertToString(Observe(Register), "Observe(value=0/Register)")
+        assertToString(Observe(Deregister), "Observe(value=1/Deregister)")
+        assertToString(Observe(1234567), "Observe(value=1234567)")
 
         // sample default data class implementations
         assertToString(UriHost("localhost"), "UriHost(uri=localhost)")
