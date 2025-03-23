@@ -69,6 +69,9 @@ class MessageTest {
         // sample default data class implementations
         assertToString(UriHost("localhost"), "UriHost(uri=localhost)")
         assertToString(UriPort(1234), "UriPort(port=1234)")
+//        assertToString(Oscore(byteArrayOf(0x09, 0x14)), "Oscore(value=09 14)")
+//        assertToString(Edhoc, "Edhoc")
+//        assertToString(Block1(100, true, 64), "Block1(blockNumber=100, more=true, blockSize=64)")
     }
 
     @Test

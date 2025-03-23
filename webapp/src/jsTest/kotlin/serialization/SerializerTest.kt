@@ -28,6 +28,10 @@ class SerializerTest {
         assertOptionSerializesTo(UriHost("localhost"), "UriHost(uri=localhost)")
         assertOptionSerializesTo(UriPort(1234), "UriPort(port=1234)")
         assertOptionSerializesTo(ETag("123".encodeToByteArray()), "ETag(etag=31 32 33)")
+
+//        assertOptionSerializesTo(Oscore(byteArrayOf(0x09, 0x14)), "Oscore(value=09 14)")
+//        assertOptionSerializesTo(Edhoc, "Edhoc")
+//        assertOptionSerializesTo(Block1(100, true, 64), "Block1(blockNumber=100, more=true, blockSize=64)")
     }
 }
 
