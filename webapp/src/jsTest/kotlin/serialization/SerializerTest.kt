@@ -24,10 +24,10 @@ class SerializerTest {
         assertOptionSerializesTo(ContentFormat.CBOR, "Content-Format: application/cbor")
         assertOptionSerializesTo(ContentFormat(20), "Content-Format: 20")
         assertOptionSerializesTo(Accept(ContentFormat.JSON), "Accept: application/json")
-        // some sample default serializations:
-        assertOptionSerializesTo(UriHost("localhost"), "UriHost(uri=localhost)")
-        assertOptionSerializesTo(UriPort(1234), "UriPort(port=1234)")
-        assertOptionSerializesTo(ETag("123".encodeToByteArray()), "ETag(etag=31 32 33)")
+        // some HTTP header-like serializations:
+        assertOptionSerializesTo(UriHost("localhost"), "Uri-Host: localhost")
+        assertOptionSerializesTo(UriPort(1234), "Uri-Port: 1234")
+        assertOptionSerializesTo(ETag("123".encodeToByteArray()), "ETag: 313233")
     }
 }
 
