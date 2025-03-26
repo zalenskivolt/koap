@@ -22,7 +22,7 @@ class SerializerTest {
         assertOptionSerializesTo(ContentFormat.PlainText, "Content-Format: text/plain; charset=utf-8")
         assertOptionSerializesTo(ContentFormat.JSON, "Content-Format: application/json")
         assertOptionSerializesTo(ContentFormat.CBOR, "Content-Format: application/cbor")
-        assertOptionSerializesTo(ContentFormat(20), "Content-Format: ContentFormat(20)")
+        assertOptionSerializesTo(ContentFormat(20), "Content-Format: 20")
         assertOptionSerializesTo(Accept(ContentFormat.JSON), "Accept: application/json")
         // some sample default serializations:
         assertOptionSerializesTo(UriHost("localhost"), "UriHost(uri=localhost)")
